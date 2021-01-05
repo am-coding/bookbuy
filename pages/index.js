@@ -1,10 +1,10 @@
-import React from 'react'
-import { signIn, signOut, useSession } from 'next-auth/client'
+import React, { useContext } from 'react'
+import AppContext from '../contexts/userContext'
 
 export default function Page() {
-  const [ session, loading ] = useSession()
-
-  return <>
-    <div>Hello</div>
-  </>
+  return (
+    <div>
+     hello
+    </div>
+  )
 }

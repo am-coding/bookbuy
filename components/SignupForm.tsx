@@ -1,4 +1,4 @@
-import {FC, useState} from 'react';
+import {FC, useState, useContext} from 'react';
 import axios from 'axios';
 import Router from 'next/router'
 
@@ -32,7 +32,6 @@ const SignupForm: FC = () => {
             Router.push("/login")
         }        
     }
-
     return (
         <form onSubmit={handleSubmit}>
             <p>username</p>

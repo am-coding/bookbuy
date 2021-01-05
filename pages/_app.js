@@ -1,9 +1,15 @@
-import { Provider } from 'next-auth/client'
+import App from 'next/app'
+import { AppProvider } from '../components/ContextWrapper'
 
-export default function App ({ Component, pageProps }) {
-  return (
-    <Provider session={pageProps.session}>
-      <Component {...pageProps} />
-    </Provider>
-  )
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props
+    return (
+      <AppProvider>
+        <Component {...pageProps} />
+      </AppProvider>
+    )
+  }
 }
+
+export default MyApp
