@@ -8,7 +8,7 @@ export default function Page() {
     const headers = { 
         'Content-Type': 'application/json'
     };
-    const req = await axios.post("http://localhost:8000/tokens/refresh", {
+    const req = await axios.post("https://22f8ecec375a.ngrok.io/tokens/refresh", {
       withCredentials: true,
       headers
     })
