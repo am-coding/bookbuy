@@ -27,7 +27,7 @@ const SignupForm: FC = () => {
         const headers = { 
             'Content-Type': 'application/json'
         };
-        const req = await axios.post("http://localhost:8000/signup", data, {headers})
+        const req = await axios.post("http://localhost:9000/signup", data, {headers})
         if (req.status === 200) {
             Router.push("/login")
         }        

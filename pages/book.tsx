@@ -19,7 +19,7 @@ const Page = ({ data, user }: InferGetServerSidePropsType<typeof getServerSidePr
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost:8000/api/books`)
+  const res = await fetch(`http://localhost:9000/api/books`)
   const data = await res.json()
   return { 
     props: {

@@ -1,5 +1,5 @@
 import {FC, useState, useContext} from 'react';
-import axios from 'axios';
+import app from '../axiosConfig';
 import Router from 'next/router'
 import UserContext from '../contexts/userContext'
 
@@ -23,7 +23,7 @@ const LoginForm: FC = () => {
         const headers = { 
             'Content-Type': 'application/json'
         };
-        const req = await axios.post("http://localhost:8000/login", data, {headers})
+        const req = await app.post("http://localhost:9000/login", data, {headers, withCredentials: true})
         if (req.status === 200) {
             Router.push("/dashboard")
         }                
