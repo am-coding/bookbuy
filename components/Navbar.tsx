@@ -10,6 +10,7 @@ const StyledNavbar = styled.nav`
     .brand {
         font-size: 1.5rem;
         margin: 0.5rem;
+        color: #0D1821;
     }
     .items ul{
         margin: 0;
@@ -21,19 +22,21 @@ const StyledNavbar = styled.nav`
     }
     .items li a {
         text-decoration: none;
-        color: #333;
+        color: #0D1821;
         padding: 1rem;
         display: block;
     }
     .items li a:hover {
-        color: pink;
+        color: #FB6376;
         transition: .3s all;
     }
     .toggle {
         position: absolute;
-        top: 1rem;
+        top: 0.7rem;
         right: 1rem;
         display: none;
+        font-size: 1.5rem;
+        color: #FB6376;
     }
     .items.active{
         display: flex;
