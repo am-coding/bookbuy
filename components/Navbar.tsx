@@ -2,20 +2,25 @@ import React, { FC, useState } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import { GiHamburgerMenu } from 'react-icons/gi';
-
+import { Button } from '@chakra-ui/react';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 const StyledNavbar = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    height: 10vh;
     .brand {
         font-size: 1.5rem;
-        margin: 0.5rem;
+        margin: 1.5rem;
         color: #0D1821;
     }
     .items ul{
         margin: 0;
         padding: 0;
         display: flex;
+        align-items: center;
+        margin-right: 1.5rem;
     }
     .items li {
         list-style: none;
@@ -23,7 +28,7 @@ const StyledNavbar = styled.nav`
     .items li a {
         text-decoration: none;
         color: #0D1821;
-        padding: 1rem;
+        padding: 1.4rem;
         display: block;
     }
     .items li a:hover {
@@ -32,7 +37,7 @@ const StyledNavbar = styled.nav`
     }
     .toggle {
         position: absolute;
-        top: 0.7rem;
+        top: 1.8rem;
         right: 1rem;
         display: none;
         font-size: 1.5rem;
@@ -40,6 +45,8 @@ const StyledNavbar = styled.nav`
     }
     .items.active{
         display: flex;
+        background-color: #fff;
+        z-index: 999;
     }
     @media only screen and (max-width: 600px) {
         .toggle {
@@ -56,7 +63,7 @@ const StyledNavbar = styled.nav`
             width: 100%;
         }
         .items li a {
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.5rem;
         }
       
     }
@@ -77,8 +84,7 @@ const Navbar: FC = () => {
                 <ul>
                     <li><Link href="#">Home</Link></li>
                     <li><Link href="#">Discover</Link></li>
-                    <li><Link href="#">Login</Link></li>
-                    <li><Link href="#">Signup</Link></li>
+                    <li><Link href="#"><Button _hover={{bg: '#0D1821'}} color="#fafafa" borderRadius="10px" size="sm" backgroundColor="#FB6376" rightIcon={<ArrowForwardIcon />}>Log In</Button></Link></li>
                 </ul>
             </div>
         </StyledNavbar>
