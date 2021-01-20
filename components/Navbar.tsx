@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Button } from '@chakra-ui/react';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { BsLink45Deg } from 'react-icons/bs'
 const StyledNavbar = styled.nav`
     display: flex;
     justify-content: space-between;
@@ -11,8 +11,11 @@ const StyledNavbar = styled.nav`
     
     height: 10vh;
     .brand {
+        display: flex;
+        align-items: center;
         font-size: 1.5rem;
         margin: 1.5rem;
+        font-weight: 600;
         color: #0D1821;
     }
     .items ul{
@@ -76,7 +79,7 @@ const Navbar: FC = () => {
     }
     return (
         <StyledNavbar>
-            <div className="brand">DevPocket</div>
+            <div className="brand">DevPocket <BsLink45Deg /></div>
             <a onClick={handleClick} href="#" className="toggle">
                 <GiHamburgerMenu />
             </a>
@@ -84,7 +87,7 @@ const Navbar: FC = () => {
                 <ul>
                     <li><Link href="#">Home</Link></li>
                     <li><Link href="#">Discover</Link></li>
-                    <li><Link href="#"><Button _hover={{bg: '#0D1821'}} color="#fafafa" borderRadius="10px" size="sm" backgroundColor="#FB6376" rightIcon={<ArrowForwardIcon />}>Log In</Button></Link></li>
+                    <li><Link href="#"><Button _hover={{bg: '#0D1821'}} color="#fafafa" borderRadius="10px" size="sm" backgroundColor="#FB6376">Coming Soon</Button></Link></li>
                 </ul>
             </div>
         </StyledNavbar>
