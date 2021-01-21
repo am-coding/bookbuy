@@ -45,6 +45,8 @@ clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
         max-width: 28rem;
     }
     @media only screen and (max-width: 600px) {
+        clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+
     .hero-div {
         padding: 1rem;
         flex-direction: column;
@@ -82,10 +84,11 @@ const Hero: FC<heroProps> = ({handleClick}) => {
                 <div className="box">
                     <h1>Create a collection of your resources.</h1>
                     <p>One place to save and organise all your programming resources and links.</p>
-                    <div className="cta">
-                    <form action="https://formspree.io/f/meqpngzp" method="POST">
-                    <Input focusBorderColor="#000"t mr="1.5rem" borderColor="#0D1821" borderWidth="1.2px" placeholder="Email Address" />
+                    <div >
+                    <form className="cta" action="https://formspree.io/f/meqpngzp" method="POST">
+                    <Input name="email" focusBorderColor="#000"t mr="1.5rem" borderColor="#0D1821" borderWidth="1.2px" placeholder="Email Address" />
                     <CustomButton 
+                    type="submit"
                     handleClick={handleClick}
                     title="Subscribe" />
                     </form> 

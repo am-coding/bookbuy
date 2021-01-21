@@ -5,7 +5,8 @@ const StyledWork = styled.div`
     max-width: 90%;
     margin: 0 auto;
     h1 {
-        font-size: 2rem;
+        margin: 1rem;
+        font-size: 3rem;
         font-weight: 700;
         text-align: center;
     }
@@ -19,7 +20,7 @@ const StyledWork = styled.div`
         flex-direction: row-reverse;
     }
     .box {
-
+        padding: 1rem;
     }
     img {
         max-width: 50%;
@@ -34,6 +35,42 @@ const StyledWork = styled.div`
         font-size: 1.2rem;
         margin-top: 1rem;
         max-width: 80%;
+    }
+    @media only screen and (max-width: 600px) {
+        max-width: 92%;
+        h1 {
+            font-size: 2rem;
+        }
+        .work-div-1 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem;
+        padding-block: 2rem;
+    }
+    .work-div-1:nth-of-type(2) {
+        flex-direction: column;
+    }
+    img {
+        max-width: 100%;
+    }
+    h2 {
+        text-align: center;
+        line-height: 1.1;
+        font-size: 2rem;
+        font-weight: 700;
+        max-width: 100%;
+    }
+    p {
+        text-align: center;
+        font-size: 1rem;
+        margin: 1rem;
+        max-width: 100%;
+    }
+    .box {
+        padding: 1rem;
+    }
     }
 `;
 

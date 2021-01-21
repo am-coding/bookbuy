@@ -8,7 +8,6 @@ const StyledNavbar = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     height: 10vh;
     .brand {
         display: flex;
@@ -64,9 +63,11 @@ const StyledNavbar = styled.nav`
         .items ul {
             flex-direction: column;
             width: 100%;
+            margin-right: 0rem;
+            padding: 1rem 0 1rem 0;
         }
         .items li a {
-            padding: 0.5rem 1.5rem;
+            padding: 0.5rem 3.5rem;
         }
       
     }
