@@ -81,7 +81,7 @@ const Work: FC = () => {
             <div className="work-div-1">
                 <div className="box">
                 <h2>Create your own customized feed of resources.</h2>
-                <p>Get a feed from different programming resources like blogs and magazines and from various sites. </p>
+                <p>Get feed from different programming resources like blogs and magazines and from various sites. </p>
                 </div>
                 <img width="100%" height="auto" src="./feed.svg" />
             </div>
