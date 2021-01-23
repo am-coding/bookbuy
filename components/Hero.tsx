@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import styled from 'styled-components';
 import CustomButton from './Button';
 import { Input } from "@chakra-ui/react"
-import { motion } from "framer-motion"
+import Rotate from 'react-reveal/Rotate';
 
 const StyledHero = styled.div`
 /* background-color: #ffe9ec;
@@ -75,16 +75,15 @@ clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
 
 interface heroProps {
     handleClick: any,
-    isVisible: any,
 }
 
-const Hero: FC<heroProps> = ({handleClick, isVisible }) => {
+const Hero: FC<heroProps> = ({handleClick }) => {
     return (
         <StyledHero>
             <Navbar/>
             <div className="hero-div">
-                <motion.div animate={{ x: -100 }}
-  transition={{ ease: "easeOut", duration: 2 }} initial={{false}} className="box">
+            <Rotate bottom left>
+                <div className="box">
                     <h1>Create a collection of your resources.</h1>
                     <p>One place to save and organise all your programming resources and links.</p>
                     <div >
@@ -96,10 +95,13 @@ const Hero: FC<heroProps> = ({handleClick, isVisible }) => {
                     title="Subscribe" />
                     </form> 
                     </div>
-                </motion.div>
+                </div> 
+                </Rotate> 
+                <Rotate bottom right>
                 <div className="svg-div">
                 <img src="./head.svg" alt="hero-img" />
                 </div>
+                </Rotate>
             </div>
         </StyledHero>
     )

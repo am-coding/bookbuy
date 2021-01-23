@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import HeadShake from 'react-reveal/HeadShake';
+import Fade from 'react-reveal/Fade';
 
 const StyledWork = styled.div`
     max-width: 90%;
@@ -79,27 +81,39 @@ const Work: FC = () => {
         <StyledWork>
             <h1>How it works</h1>
             <div className="work-div-1">
+                <HeadShake duration={3000}>
                 <div className="box">
                 <h2>Create your own customized feed of resources.</h2>
                 <p>Get feed from different programming resources like blogs and magazines and from various sites. </p>
                 </div>
+                </HeadShake>
+                <Fade duration={3000}>
                 <img width="100%" height="auto" src="./feed.svg" />
+                </Fade>
             </div>
             
             <div className="work-div-1">
+                <HeadShake duration={3000}>
                 <div className="box">
                 <h2>Save links from feed or add your own.</h2>
                 <p>Get a feed from different programming resources like blogs and magazines and from various sites. </p>
                 </div>
+                </HeadShake>
+                <Fade duration={3000}>
                 <img width="100%" height="auto" src="./save.svg" />
+                </Fade>
             </div>
 
             <div className="work-div-1">
+            <HeadShake duration={3000}>
                 <div className="box">
                 <h2>Keep track of all your links and resources.</h2>
                 <p>Get a feed from different programming resources like blogs and magazines and from various sites. </p>
                 </div>
+                </HeadShake>
+                <Fade duration={3000}>
                 <img width="100%" height="auto" src="./track.svg" />
+                </Fade>
             </div>
         </StyledWork>
     )
