@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import styled from 'styled-components';
 import CustomButton from './Button';
 import { Input } from "@chakra-ui/react"
-import Rotate from 'react-reveal/Rotate';
+import Fade from 'react-reveal/Fade';
 
 const StyledHero = styled.div`
 /* background-color: #ffe9ec;
@@ -34,16 +34,16 @@ clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
         max-width: 50%;
     }
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         line-height: 1.1;
         font-weight: 700;
-        max-width: 28rem;
+        max-width: 34rem;
     }
     P {
         padding: 1rem 0 1rem 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
-        max-width: 28rem;
+        max-width: 30rem;
     }
     @media only screen and (max-width: 600px) {
         clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
@@ -63,7 +63,7 @@ clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
         max-width: 100%;
     }
     h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
         max-width: 100%;
     }
     p {
@@ -80,12 +80,12 @@ interface heroProps {
 const Hero: FC<heroProps> = ({handleClick }) => {
     return (
         <StyledHero>
-            <Navbar/>
+            <Navbar />
             <div className="hero-div">
-            <Rotate bottom left>
+            <Fade>
                 <div className="box">
-                    <h1>Create a collection of your resources.</h1>
-                    <p>One place to save and organise all your programming resources and links.</p>
+                    <h1>Create a collection of your resources and links and customise your feed.</h1>
+                    <p>One place to save and organise all your programming resources and links with a customizable feed.</p>
                     <div >
                     <form className="cta" action="https://formspree.io/f/meqpngzp" method="POST">
                     <Input name="email" focusBorderColor="#000"t mr="1.5rem" borderColor="#0D1821" borderWidth="1.2px" placeholder="Email Address" />
@@ -96,12 +96,12 @@ const Hero: FC<heroProps> = ({handleClick }) => {
                     </form> 
                     </div>
                 </div> 
-                </Rotate> 
-                <Rotate bottom right>
+                </Fade> 
+                <Fade>
                 <div className="svg-div">
                 <img src="./head.svg" alt="hero-img" />
                 </div>
-                </Rotate>
+                </Fade>
             </div>
         </StyledHero>
     )

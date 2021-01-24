@@ -31,7 +31,7 @@ const StyledWork = styled.div`
         line-height: 1.1;
         font-size: 2.5rem;
         font-weight: 700;
-        max-width: 80%;
+        max-width: 85%;
     }
     p {
         font-size: 1.2rem;
@@ -80,11 +80,11 @@ const Work: FC = () => {
     return (
         <StyledWork>
             <h1>How it works</h1>
-            <div className="work-div-1">
+            <div className="work-div-1">  
                 <HeadShake duration={3000}>
                 <div className="box">
                 <h2>Create your own customized feed of resources.</h2>
-                <p>Get feed from different programming resources like blogs and magazines and from various sites. </p>
+                <p>Get feed from different programming resources like blogs and magazines or even add your own resource. </p>
                 </div>
                 </HeadShake>
                 <Fade duration={3000}>
@@ -96,7 +96,7 @@ const Work: FC = () => {
                 <HeadShake duration={3000}>
                 <div className="box">
                 <h2>Save links from feed or add your own.</h2>
-                <p>Get a feed from different programming resources like blogs and magazines and from various sites. </p>
+                <p>You can save links from the feed to visit later and create your own feed of your saved links/resources,or add any external link. </p>
                 </div>
                 </HeadShake>
                 <Fade duration={3000}>
@@ -108,7 +108,7 @@ const Work: FC = () => {
             <HeadShake duration={3000}>
                 <div className="box">
                 <h2>Keep track of all your links and resources.</h2>
-                <p>Get a feed from different programming resources like blogs and magazines and from various sites. </p>
+                <p>Save all your resources and links at one place to share or customize and keep track of them. </p>
                 </div>
                 </HeadShake>
                 <Fade duration={3000}>

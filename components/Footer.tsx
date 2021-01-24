@@ -6,20 +6,23 @@ import { AiOutlineGithub } from 'react-icons/ai';
 
 const StyledFooter = styled.div`
     height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .icons {
-        display: flex;
-        align-items: center;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 1rem;
     }
 `;
 
 const Footer: FC = () => {
     return (
         <StyledFooter>
-            <div></div>
             <div className="icons">
-                <FiInstagram />
-                <AiOutlineTwitter />
-                <AiOutlineGithub />
+                <a target="_blank" href="https://www.instagram.com/dev.pocket/"><FiInstagram size={30} /></a>
+                <a target="_blank" href="https://twitter.com/dev_pockett"><AiOutlineTwitter size={30} /></a>
+                <a target="_blank" href="https://github.com/am-coding"><AiOutlineGithub size={30} /></a>
             </div>
         </StyledFooter>
     )

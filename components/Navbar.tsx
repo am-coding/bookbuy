@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Button } from '@chakra-ui/react';
 import { BsLink45Deg } from 'react-icons/bs'
+import RegisterModal from '../components/RegisterModal';
+
 const StyledNavbar = styled.nav`
     display: flex;
     justify-content: space-between;
@@ -86,8 +88,8 @@ const Navbar: FC = () => {
             </a>
             <div className={classname === false ? 'items' : 'items active'}>
                 <ul>
-                    <li><Link href="#">Home</Link></li>
-                    <li><Link href="#">Discover</Link></li>
+                    <li><Link href="#"><RegisterModal title="Register" /></Link></li>
+                    <li><Link href="#">Contact</Link></li>
                     <li><Link href="#"><Button _hover={{bg: '#0D1821'}} color="#fafafa" borderRadius="10px" size="sm" backgroundColor="#FB6376">Coming Soon</Button></Link></li>
                 </ul>
             </div>
