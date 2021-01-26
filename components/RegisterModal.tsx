@@ -27,6 +27,7 @@ const RegisterModal: FC <buttonProps> = ({title}) => {
             <Modal
                 isOpen={isOpen}
                 onClose={onClose}
+                size="xs"
             >
                 <ModalOverlay />
                 <ModalContent>
