@@ -9,7 +9,7 @@ export const ArticleProvider = ({children}) => {
           const db = firebase.firestore()
           const data = db.collection("headlines").doc('coding')
           data.get().then(doc => {
-           console.log(doc.data().articles);
+        //    console.log(doc.data().articles);
            setArticles(doc.data().articles);
           })
         }

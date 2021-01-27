@@ -1,5 +1,5 @@
 import React from 'react'
-// import Articles from '../components/Articles';
+import Articles from '../components/Articles';
 import Hero from '../components/Hero';
 import Work from '../components/Work';
 import NotifyBar from '../components/NotifyBar';
