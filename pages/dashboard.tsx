@@ -1,6 +1,8 @@
 import React, {useContext, useEffect} from 'react'
 import UserContext from '../contexts/userContext'
 import app from "../axiosConfig"
+import { AppProvider } from '../components/ContextWrapper'
+import Collection from '../components/collection'
 
 export default function Page() {
   const [token, setToken] = useContext(UserContext)
@@ -17,11 +19,12 @@ export default function Page() {
     console.log(resp.access_token);
 }
 useEffect(() => {
-  refreshToken()
+    refreshToken()
 }, [])
   return (
-    <div>
-        {token}
-    </div>
+    <AppProvider>
+      {token}
+      <Collection />
+    </AppProvider>
   )
 }

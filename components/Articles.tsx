@@ -6,21 +6,25 @@ import firebase from '../firebase';
 const Articles = () => {
     const [articles, setArticles] = useContext(ArticlesContext);    
     useEffect(() => {
-        getSources("thenextweb.com").then((data) => {
+        getSources("dev.to,smashingmagazine.com").then((data) => {
             const db = firebase.firestore()
             const addData = db.collection("headlines").doc('coding').set(data)
             addData.then(() => {
-                console.log("added");
-                
+                const data = db.collection("headlines").doc('coding')
+                data.get().then(doc => {
+              //    console.log(doc.data().articles);
+                 setArticles(doc.data().articles);
+                })
             })
         })
     }, [])
     return (
         <div>
+            yo
             {articles.map((data: any) => {
                 return (
                     <div>
-                        {data.content}
+                        {data.source.name}
                     </div>
                 )
             })}
